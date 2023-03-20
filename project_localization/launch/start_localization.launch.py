@@ -36,6 +36,12 @@ def generate_launch_description():
             parameters=[{'use_sim_time': True},
                         {'autostart': True},
                         {'node_names': ['map_server','amcl']}]),
+        
+        Node(
+            package='project_localization',
+            executable='spot_recorder',
+            name='spot_recorder',
+            output='screen'),
 
         Node(
             package='rviz2',
