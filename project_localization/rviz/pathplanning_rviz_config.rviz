@@ -7,9 +7,6 @@ Panels:
         - /Global Options1
         - /Status1
         - /Map1/Topic1
-        - /TF1
-        - /TF1/Frames1
-        - /TF1/Tree1
         - /LaserScan1
         - /PoseWithCovariance1
         - /PoseArray1
@@ -76,51 +73,13 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        base_footprint:
-          Value: true
-        base_link:
-          Value: false
-        base_scan:
-          Value: false
-        camera_link:
-          Value: false
-        camera_link_frame:
-          Value: false
-        caster_back_link:
-          Value: false
-        imu_link:
-          Value: false
-        map:
-          Value: false
-        odom:
-          Value: true
-        wheel_left_link:
-          Value: false
-        wheel_right_link:
-          Value: false
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: false
       Tree:
-        map:
-          odom:
-            base_footprint:
-              base_link:
-                base_scan:
-                  {}
-                camera_link:
-                  camera_link_frame:
-                    {}
-                caster_back_link:
-                  {}
-                imu_link:
-                  {}
-                wheel_left_link:
-                  {}
-                wheel_right_link:
-                  {}
+        {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -318,10 +277,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.3553979396820068
+      Pitch: 1.3653979301452637
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.1253979206085205
+      Yaw: 1.120397925376892
     Saved: ~
 Window Geometry:
   Displays:

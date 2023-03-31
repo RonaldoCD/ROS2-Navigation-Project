@@ -5,12 +5,14 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
 
+    # maps_dir = os.path.join(get_package_share_directory('project_mapping'), 'maps')
+    # map_file = os.path.join(maps_dir, 'real_map.yaml')
     maps_dir = os.path.join(get_package_share_directory('project_mapping'), 'maps')
     map_file = os.path.join(maps_dir, 'turtlebot_area_1cm.yaml')
     config_dir = os.path.join(get_package_share_directory('project_localization'), 'config')
     amcl_yaml = os.path.join(config_dir, 'amcl_config.yaml')
     rviz_dir = os.path.join(get_package_share_directory('project_localization'), 'rviz')
-    rviz_file = os.path.join(rviz_dir, 'localization_rviz_config.rviz')
+    rviz_file = os.path.join(rviz_dir, 'pathplanning_rviz_config.rviz')
 
     return LaunchDescription([
         Node(

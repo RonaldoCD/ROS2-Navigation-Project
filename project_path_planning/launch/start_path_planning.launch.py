@@ -28,18 +28,18 @@ def generate_launch_description():
             parameters=[controller_yaml]),
         
         Node(
-            package='nav2_bt_navigator',
-            executable='bt_navigator',
-            name='bt_navigator',
-            output='screen',
-            parameters=[bt_navigator_yaml]),
-        
-        Node(
             package='nav2_recoveries',
             executable='recoveries_server',
             name='recoveries_server',
             parameters=[recovery_yaml],
             output='screen'),
+
+        Node(
+            package='nav2_bt_navigator',
+            executable='bt_navigator',
+            name='bt_navigator',
+            output='screen',
+            parameters=[bt_navigator_yaml]),
         
         Node(
             package='nav2_lifecycle_manager',
@@ -48,8 +48,9 @@ def generate_launch_description():
             output='screen',
             parameters=[{'use_sim_time': True},
                         {'autostart': True},
+                        {'bond_timeout':0.0},
                         {'node_names': ['planner_server',
                                         'controller_server',
-                                        'bt_navigator',
-                                        'recoveries_server']}])
+                                        'recoveries_server',
+                                        'bt_navigator']}])
         ]) 
